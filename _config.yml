@@ -9,9 +9,10 @@ excerpt_link: read more
 
 # Favicon
 # favicon: /favicon.ico
+favicon: images/favicon.ico
 
 # Settings toggle
-settings: true
+settings: false
 
 # Code CSS toggle
 highlight: true
