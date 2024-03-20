@@ -89,6 +89,7 @@ body {
 #title a {
   height: 1.5em;
   line-height: 1.5;
+  flex-shrink: 0;
 }
 
 #header nav {
