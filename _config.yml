@@ -11,6 +11,9 @@ excerpt_link: read more
 # favicon: /favicon.ico
 favicon: images/favicon.ico
 
+# Logo:
+logo: images/cutie.webp
+
 # Settings toggle
 settings: false
 
