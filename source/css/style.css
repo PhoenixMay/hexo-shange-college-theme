@@ -110,7 +110,6 @@ body {
 
 /* posts */
 .article {
-  border-bottom: solid 1px var(--secondary-color);
   margin: 2em 0;
   padding-bottom: 1em;
 }
@@ -236,7 +235,9 @@ body {
 
 .article-nav {
   display: flex;
-  margin: 2em 0;
+  margin: 0 0 2em 0;
+  border-top: solid 1px var(--secondary-color);
+  padding-top: 2em;
 }
 
 #article-nav-older,
