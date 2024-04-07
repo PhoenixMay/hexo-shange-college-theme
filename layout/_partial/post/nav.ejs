@@ -1,28 +1,31 @@
-<% if (post.prev || post.next){ %>
+<% if ((post.prev || post.next) && post.title !== '这里是商学院'){ %>
 <nav id="article-nav" class="article-nav">
   <% if (post.prev){ %>
-    <a href="<%- url_for(post.prev.path) %>" id="article-nav-newer" class="article-nav-link-wrap newer">
-      <strong class="article-nav-caption"><%= __('newer') %></strong>
-      <div class="article-nav-title">
-        <% if (post.prev.title){ %>
-          <%= post.prev.title %>
-        <% } %>
-      </div>
-    </a>
+  <a
+    href="<%- url_for(post.prev.path) %>"
+    id="article-nav-newer"
+    class="article-nav-link-wrap newer"
+  >
+    <strong class="article-nav-caption"><%= __('newer') %></strong>
+    <div class="article-nav-title">
+      <% if (post.prev.title){ %> <%= post.prev.title %> <% } %>
+    </div>
+  </a>
   <% } else { %>
-    <span id="article-nav-newer" class="article-nav-link-wrap newer"></span>
-  <% } %>
-  <% if (post.next){ %>
-    <a href="<%- url_for(post.next.path) %>" id="article-nav-older" class="article-nav-link-wrap older">
-      <strong class="article-nav-caption"><%= __('older') %></strong>
-      <div class="article-nav-title">
-        <% if (post.next.title){ %>
-          <%= post.next.title %>
-        <% } %>
-      </div>
-    </a>
+  <span id="article-nav-newer" class="article-nav-link-wrap newer"></span>
+  <% } %> <% if (post.next){ %>
+  <a
+    href="<%- url_for(post.next.path) %>"
+    id="article-nav-older"
+    class="article-nav-link-wrap older"
+  >
+    <strong class="article-nav-caption"><%= __('older') %></strong>
+    <div class="article-nav-title">
+      <% if (post.next.title){ %> <%= post.next.title %> <% } %>
+    </div>
+  </a>
   <% } else { %>
-    <span id="article-nav-older" class="article-nav-link-wrap older"></span>
+  <span id="article-nav-older" class="article-nav-link-wrap older"></span>
   <% } %>
 </nav>
 <% } %>
